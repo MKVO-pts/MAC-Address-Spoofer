@@ -82,7 +82,7 @@ menu() {
 	echo Select only the number: && read option
 	
 	
-	if [ $option -eq 1 ]; then
+	if [ $option -eq 1 ]; then #option 1
 		display
 		echo -e "Select one option:(The Number)"
 		read choise
@@ -90,7 +90,7 @@ menu() {
 		sleep 10
 		menu
 
-	elif [ $option -eq 2 ]; then
+	elif [ $option -eq 2 ]; then #option 2
 		display
 		echo -e "Select one option:(The Number)"
 		read choise
@@ -100,11 +100,12 @@ menu() {
 		sleep 15
 		menu
 
-	elif [ $option -eq 3 ]; then
+	elif [ $option -eq 3 ]; then #option 3
 		echo
 		echo -e "${RED}Closing the Tool... ${NC}"
 		sleep 2
 		exit
+	#to any input that is not a option
 	else
 		echo -e "${RED}Unknown command / option ${NC}"
 		echo -e "${RED}Going back to the menu... ${NC}"
@@ -113,4 +114,5 @@ menu() {
 
 	fi
 }
+#start the main loop
 menu
